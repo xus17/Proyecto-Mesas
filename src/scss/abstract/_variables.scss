@@ -1,0 +1,34 @@
+//Paleta de colores//
+$colors: (
+    negro: #000,
+    blanco: #fff,
+    logo: rgb(146, 146, 146),
+    fondo: rgb(230, 228, 228),
+);
+
+//Función que devuelve el color//
+@function color ($color-name){
+    @return map-get($colors, $color-name);
+}
+
+//Tamaños fuente//
+$font-sizes:(
+    xxxxl:15rem,
+    xxl:12rem,
+    xxm:9.5rem,
+    xl:3rem,
+    lg:2.5rem,
+    md:2rem,
+    sm:1.5rem,
+    xs:1.4rem,
+    xxs:1rem,
+    xxxs:0.5rem,
+    xxxxs:0.3rem,
+    xxxxxs:0.2rem,
+    xxxxxxs:0.1rem
+);
+
+//Función que devuelve un tamaño//
+@function size($size){
+    @return map-get($font-sizes, $size);
+}

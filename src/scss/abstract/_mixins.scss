@@ -1,0 +1,115 @@
+/*Mixin que coge la fuente Roboto Condensed*/
+@mixin fuente-Reboto{
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/*Mixin que coge la fuente Libre Baskerville*/
+@mixin fuente-Libre{
+  font-family: "Libre Baskerville", serif;
+}
+
+/*Mixin que le da un display flex y los ordena en columnas*/
+@mixin flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+/*Mixin que le da un display flex, los ordena en columnas y los alinea al centro.*/
+@mixin flex-center-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*Mixin que le da un display flex y los alinea al centro.*/
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+/*Mixin que le da un display flex, los ordena en columnas y los alinea al centro.*/
+@mixin flex-column-cen{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Mixin que le da un display flex, los ordena en filas, los hace un bloque y los separa en el espacio que halla.*/
+@mixin flex-row{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+}
+
+/*Mixin que le da bordes, hace que no se pueda ver con el display none, le da una posición relativa en la que estará centrada
+en el div de productos o novedades, justo encima de la foto.*/
+@mixin precio{
+        display: none;
+        position: relative;
+        top: 35%;
+        text-align: center;
+        z-index: 99;
+        background-color: color(blanco);
+        left: 7.3%;
+        width: size(xxm);
+        border-top: solid 1px color(negro);
+        border-bottom: solid 1px color(negro);
+        border-left: solid 1px color(blanco);
+        border-right: solid 1px color(blanco);
+}
+
+/*Mixin que le da un tamaño al boton, un color, un border radius para que se vea como mas redondo, y el cursor cuando este en el aparezca.*/
+@mixin botonProd{
+  width: 120px;
+        margin-top: size(xxxs);
+        background-color:color(negro) ;
+        color: color(blanco);
+        border-radius: 10px;
+        cursor: pointer;
+        @include fuente-Reboto();
+}
+
+/*Mixin en la que hace una animación de 3 segundos en la que se cambia el color progresivamente de los productos.*/
+@mixin animacionColor{
+    animation: go 3s;
+    background-color: color(logo);
+    @keyframes go {
+        from {
+          background: color(blanco);
+        }
+
+        to {
+          background: color(logo);
+        }
+      }
+}
+
+/*Mixin en la que hace una aminación cada 0.5 segundos progresivamente que se ve como si diera vueltas el producto cuando esta encima de la imágen el cursor.*/
+@mixin animacionImg{
+    animation: movimiento 0.5s infinite;
+    @keyframes movimiento {
+        from {
+          transform: rotate3d(0,1,0,180deg);
+        }
+
+        to {
+          transform: rotate3d(0,1,0,360deg);
+        }
+      }
+}
+
+/*Mixin en la que hace una animación cada 0.2 segundos progresivamente que se ve como giran los enlaces.*/
+@mixin animacionIconos{
+  animation: girorapido 0.2s infinite;
+  @keyframes girorapido {
+      from {
+        transform: rotate(-5deg);
+      }
+
+      to {
+        transform: rotate(5deg);
+      }
+    }
+}

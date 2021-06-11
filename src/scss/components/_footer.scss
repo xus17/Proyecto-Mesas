@@ -1,0 +1,45 @@
+/*Se importan las variables y los mixins*/
+
+@import "../abstract/_variables.scss";
+@import "../abstract/_mixins.scss";
+
+    /* Estamos organizando la distribuicion de los elementos del footer para que se vea uno encima de otro centrado con un include flex-column, 
+    dandole los margenes ,el padding necesario, un color , borde para que se vea bonito y además se le dan colores y tamaños desde el variables scss. */
+
+footer {
+    @include flex-column();
+    justify-content: center;
+    text-align: center;
+    background-color: #313D43;
+    padding-top: size(md);
+    padding-bottom:size(md) ;
+    width: 100%;
+    @include fuente-Reboto();
+    color:color(blanco);
+    border-top: #313D43 1px solid;
+
+    /*Le damos la distribucion flex y un space around para que se ajusten a la página los enlaces. */
+    div{
+      display: flex;
+      justify-content: space-around;
+      font-size: size(md);
+      color:color(blanco);
+
+      /*Le doy un color a los enlaces con variables.scss. */
+      a{
+        i{
+          color:color(fondo);
+        }
+        
+      }
+      /*Le doy un color a los enlaces visitados con variables.scss. */
+      a:visited{
+        color:color(negro);
+      }
+      a:hover{
+        cursor: pointer;
+        @include animacionIconos();
+        transform: scale(1.8);
+      }
+    }
+  }

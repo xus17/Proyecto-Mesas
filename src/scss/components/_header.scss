@@ -1,0 +1,77 @@
+/*Se importan las variables y los mixins*/
+
+@import "../abstract/_variables.scss";
+@import "../abstract/_mixins.scss";
+
+/*Le damos el 100% del tamaño, un color al fondo cogido de las variables.scss, y un borde abajo para que se vea mas estético.*/
+
+
+header {
+  background: color(logo);
+  width: 100%;
+  border-bottom: solid 1px color(negro);
+
+  .fa{
+    color: #313D43;
+    background-color: color(blanco);
+    border-radius:30px;
+    padding: 2px;
+    border: 4px solid #313D43; 
+  }
+
+  /*Le damos una distribución grid en columnas que se dividen al 50%, dandole un tamaño de size cogido desde las variables.scss*/
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: size(lg);
+    margin: 0;
+
+    /*Se le da un margen arriba, dandole un tamaño desde las variables.scss */
+    li:first-child {
+      margin-top: size(xxs);
+    }
+
+    /* Se le da el tamaño al 50%*/
+    li {
+      width: 50%;
+      
+      a  {
+        /*Se le da un tamaño y un color desde las variables.scss */
+        i{
+          color: color(negro);
+          margin-right: size(xxxxxs);
+        }
+        /*Se le da un tamaño de fuente desde las variables.scss */
+        p{
+          font-size: size(xxs);
+        }
+        
+      }
+    }
+
+    /*Se le da un padding arriba y abajo, con tamaños cogidos desde las variables.scss*/ 
+    li:nth-child(2) {
+      padding-top: size(xxs);
+      padding-bottom: size(xxs);
+      text-align: right;
+      width: 90%;
+
+      /* Le damos una distribución en la misma linea con flex. */
+      div {
+        display: inline-flex;
+
+        /* Le damos una distribución flex con un margen a la derecha con tamaños y colores sacados desde las variables.scss*/
+        #cesta {
+          display: flex;
+          margin-right: size(xxs);
+          color: color(negro);
+          background-color: color(fondo);
+          border-radius: 20px;
+          border: 1px solid color(negro);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

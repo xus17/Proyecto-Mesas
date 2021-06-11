@@ -1,0 +1,82 @@
+/*Se importan las variables y los mixins*/
+@import "../abstract/_variables.scss";
+@import "../abstract/_mixins.scss";
+/*Le damos una distribución flex, con direccion en columnas y lo alineamos al centro. */
+.com select, .com input{
+  width: 6rem;
+}
+.separar select, .separar input{
+  width: 6rem;
+}
+#carroAdmin {
+  @include flex-center-column();
+  /*Le damos tamaños a la imágen y un radio para que no se vea muy agresiva. */
+  img {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+  }
+  /*Se le da un width, un color y unos tamaños cogidos de variables.scss*/
+  #carroA {
+    margin-top: size(md);
+    margin-bottom: 4rem;
+    width: 70%;
+    background-color: color(blanco);
+    padding: size(md);
+    @include fuente-Reboto();
+    /*Alineamos al centro el texto*/
+    h1 {
+      text-align: center;
+      @include fuente-Libre();
+    }
+    /*Le damos a los a del div edits que al pasar encima de ellos se vea el cursor. */
+    #edits a:hover {
+      cursor: pointer;
+    }
+    /*Le damos una distribución flex, los orientamos en columnas alineando todos los componentes al centro dandole un 
+    color, un pading tanto arriba como abajo, y un borde. */
+    #formularioAdmin,
+    #formularioedit {
+      @include flex-center-column();
+      background: color(fondo);
+      padding-top: size(md);
+      padding-bottom: size(md);
+      border: solid 1px color(negro);
+      /*Le damos una distribución flex, alineandolos al final con un margen tanto arriba como abajo. */
+      input {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: size(xxxs);
+            margin-bottom: size(xxxs);
+          }
+    }
+    /*Le damos un color al div, un borde, un padding y un margin bottom para que no se vean juntos los diferentes divs. */
+    .carroAdmin {
+      background: color(fondo);
+      margin-bottom: size(xxxs);
+      padding: size(xxs);
+      border: solid 1px color(negro);
+      /*Le damos una distribucion flex, la separamos a lo largo del div para que no salgan los componentes pegados con el space aroun,
+      y hacemos que se formen un bloque con el wrap. */
+      .carroa1 {
+        @include flex-row();
+      }
+      /*Se le da la distribucion flex y lo alineamos en columna. */
+      .cara1 {
+        @include flex-column();
+        text-align: center;
+        #edits {
+          /* Se le da un color a los enlaces y un margen.*/
+          a {
+            margin: size(xxxs);
+            color:color(negro);
+          }
+          /* Se le da un color a los enlaces visitados.*/
+          a:visited {
+            color:color(negro);
+          }
+        }
+      }
+    }
+  }
+}

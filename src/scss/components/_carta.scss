@@ -1,0 +1,147 @@
+/*Se importan las variables y los mixins*/
+@import "../abstract/_variables.scss";
+@import "../abstract/_mixins.scss";
+
+#caa{
+  background-color: color(logo);
+  border-radius: 5px;
+}
+a{
+  cursor: pointer;
+  text-decoration: none;
+  color: color(negro);
+  margin: 0.5rem;
+  
+}
+/*Se le da un include flex-column, se alinean los elementos al centro, y añado una fuente. */
+#principal {
+  @include flex-column();
+  align-items: center;
+  @include fuente-Reboto();
+  /*Se le da una fuente a los titulos. */
+  h1 {
+    
+    font-family: 'Viaoda Libre', cursive;
+    margin-top: 10rem;
+    margin-bottom: size(xl);
+    font-size: 7rem;
+  }
+  #codigoqr{
+    background-color:#59676d;
+    padding: size(sm);
+    margin: size(md);
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px color(negro);
+    align-items: center;
+    justify-content: center;
+  }
+  #qr{
+    background:#59676d;
+    color: color(blanco);
+    padding: size(sm);
+    margin: size(md);
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px color(blanco);
+    cursor: pointer;
+  }
+  #carta{
+    border: solid 1px white;
+    background: #59676d;
+    width: 70%;
+      padding: size(sm);
+      margin: size(md);
+      border-radius: 20px;
+      box-shadow: 2px 2px 10px color(negro);
+    #carta2  {
+      padding: size(sm);
+      border: white 4px outset;
+      background: #59676d;
+      border-radius: 20px;
+      box-shadow: 2px 2px 10px color(blanco);
+      
+      #categoria{
+        color:color(blanco);
+      }
+      ul {
+        list-style: none;
+        color:color(blanco);
+        li::before {
+          content: "\2022";
+          color: rgb(208, 255, 0);
+          font-weight: bold;
+          display: inline-block; 
+          width: 1em;
+          margin-left: -1em;
+          margin-top: 1em;
+        }
+      }
+      
+      
+  
+  }
+  
+    /*Se le da un transform para que salga para fuera con una animación de cambio de color desde mixins.*/
+    #producto{
+      color: color(blanco);
+      font-style: bold;
+    }
+  }
+  /*Se le da un display flex, center y además se juntan los componentes con wrap */
+  #bloque {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    /*Se le incluye el flex-column, un padding, un margin colores y se cogen los valores desde variables scss.*/
+    #articulos {
+      @include flex-column();
+      background: color(blanco);
+      text-align: center;
+      width: size(xxl);
+      padding: size(sm);
+      margin: size(md);
+      border-radius: 20px;
+      box-shadow: 2px 2px 10px color(negro);
+      cursor: pointer;
+      /*Se le da un transform para que salga para fuera con una animación de cambio de color desde mixins.*/
+      &:hover {
+       transform: scale(1.1);
+        @include animacionColor();
+        /*Se le da una animación de color dede mixins.*/
+        #precio {
+          display: inline;
+          @include animacionColor();
+        }
+      }
+      /*Se le pasa una serie de componentes que hacen que el precio este ocultado en el centro, y solo aparezca cuando se le pasa el raton por encima con el hover.*/
+      #precio {
+        @include precio();
+      }
+      /*Se le da un tamaño a la imágen, un borde y un border radius con valores cogidos desde variables.scss*/
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 15px;
+        border: solid 1px color(negro);
+        /*Se le incluye una animación que hace que la imágen parezca que salga en 3d.*/
+        &:hover{
+          @include animacionImg();
+        }
+      }
+      /*Se le da una distribución de flex-center-column*/
+      div {
+        @include flex-center-column();
+      }
+      /*Se le asocian una serie de componentes para dejar el boton mejor esteticamente.*/
+      button {
+        @include botonProd();
+      }
+      /*Se le da un margen con variables de scss.*/
+      p {
+        margin: size(xxxxs);
+      }
+    }
+    
+  }
+}

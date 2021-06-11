@@ -1,0 +1,40 @@
+@import "../abstract/_variables.scss";
+@import "../abstract/_mixins.scss";
+/*Le damos una distribución flex,alineamos en columnas los componentes al centro, y le damos 100% del height. */
+
+
+#registrar4 {
+  @include flex-center-column();
+  @include fuente-Reboto();
+  
+  
+  /*Le damos una distribución flex, alineamos en columnas los componentes al centro, le damos unas sombras en color negro, un radio para que no
+  se vean mas estéticos los componentes y un tamaño de 15rem. */
+  #registrar3 {
+    width: 70%;
+    padding: size(sm);
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+
+    @include flex-center-column();
+    box-shadow: 2px 2px 10px color(negro);
+    background: color(blanco);
+    border-radius: 20px;
+    /*Le damos un margen hacia abajo de 0.5rem. */
+    div {
+      margin-bottom: size(xxxs);
+      
+    }
+    h4{
+      text-align: center;
+    }
+    img{
+      margin-left:size(sm);
+      margin-top:size(sm);
+      margin-bottom: size(sm);
+    }
+    input{
+      width: size(xxl);
+    }
+  }
+}
