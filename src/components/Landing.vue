@@ -55,7 +55,7 @@ export default {
     width: 100%;
     height: 100vh;
     position: relative;
-    background-image: url("https://www.ecestaticos.com/image/clipping/1200/675/0e6218904d5b56c1dd50ad9eb5da7ed2/comes-mucho-pescado-ten-cuidado-asi-puede-afectar-a-tu-salud.jpg");
+    background-image: url("https://wallpaperaccess.com/full/1156778.jpg");
     background-size: cover;
   }
   .logo{

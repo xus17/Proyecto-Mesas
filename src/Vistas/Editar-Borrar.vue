@@ -12,7 +12,7 @@
           </tr>
           <tr>
             <td>Mesa: </td>
-            <td><select v-model="zona">
+            <td><select v-model="zona" class="probar">
               <option >Comedor</option>
               <option >Terraza 1</option>
               <option >Terraza 2</option>
@@ -24,11 +24,11 @@
           </tr>
           <tr>
             <td>Teléfono:</td>
-            <td><input type="number" v-model="telefono" name="telefono" placeholder="Aqui el telefono.." required></td>
+            <td><input type="number" v-model="telefono" name="telefono" placeholder="Aqui el telefono.." required style="width:100%"></td>
           </tr>
           <tr>
             <td>Personas:</td>
-            <select id="optPersonas" name="personas" v-model="personas">
+            <select id="optPersonas" name="personas" v-model="personas" >
               <option >1</option>
               <option >2</option>
               <option >3</option>
@@ -50,7 +50,7 @@
           <tr>
             <td><input type="text" v-model="codigo" name="codigo" style="display:none"></td>
             <td><input type="text" id="emailD" name="email" v-model="emaail" style="display:none" ></td>
-            <td><button><i class="fa fa-edit" aria-hidden="true"></i></button></td>
+            <td><button ><i class="fa fa-edit" aria-hidden="true"></i></button></td>
           </tr>
         </table>
         </form>
@@ -66,7 +66,7 @@
           </tr>
           <tr>
             <td><input type="text" id="emailC" name="email" v-model="emaail" style="display:none"></td>
-            <td><button type="submit"><i class="fa fa-trash" aria-hidden="true"> </i></button></td>
+            <td><button id="borrado" type="submit"><i class="fa fa-trash" aria-hidden="true"> </i></button></td>
             <td ></td>
           </tr>
         </table>
@@ -144,8 +144,7 @@ export default {
         this.hora="20:00";
       },
       borrar(e){
-
-        
+        console.log(""+e.target);
           if(this.codigo2!=""){
             var borrado = false;
             for(var i=0;i<this.reservas.length;i++){
@@ -345,4 +344,5 @@ export default {
 
 <style lang="scss" scope >
 @import "../scss/components/_login.scss";
+
 </style>

@@ -7,7 +7,7 @@
         <p><strong>Bienvenid@s a la Página Web de Restaurante Miramar en Torrenueva
 </strong><br>
 <br>
-Situado en un lugar privilegiado, en pleno Paseo Marítimo <a href="https://www.google.com.hk/maps/place/Bar+Restaurante+%22Miramar%22/@36.7030404,-3.489328,3a,75y,51.31h,94.05t/data=!3m6!1e1!3m4!1sAlUnXfqAjbBxrl6NRjoRNA!2e0!7i13312!8i6656!4m12!1m6!3m5!1s0xd719991eea51d97:0x21a0e1dfae3a2e2f!2sBar+Restaurante+%22Miramar%22!8m2!3d36.7031283!4d-3.4893512!3m4!1s0xd719991eea51d97:0x21a0e1dfae3a2e2f!8m2!3d36.7031283!4d-3.4893512" target="_blank">(Ver Mapa de Ubicación)</a>, su cocina tradicional, cuidada decoración y buen 
+Situado en un lugar privilegiado, en pleno Paseo Marítimo , su cocina tradicional, cuidada decoración y buen 
 ambiente, te proporcionarán una experiencia única.<br><br>
 
 Nuestro restaurante te propone un viaje culinario, desde los entrantes hasta el postre, donde prima la calidad de los productos, frescos y naturales, aderezados con una selecta y variada carta de vinos. Todo ello con el valor añadido de un entorno tranquilo, exquisitez en el trato (plantilla de profesionales que lograrán que se sienta como en su propia casa) y una mesa dispuesta con mimo frente al mar.
@@ -18,8 +18,8 @@ Además, disfrute de nuestra terraza tanto en invierno como en verano gracias al
  <br><br>
 
  
-Reservas:
-651 171 228 / 605 522 445
+ Contáctanos:
+651 171 228 / 605 522 777
 </p>
 
       </div>

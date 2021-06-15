@@ -260,6 +260,21 @@ export default {
 
                           this.usuario = '', this.email = '', this.telefono = ''
                           this.$notify({ type: 'success', title: 'Reserva aceptada', text: 'Se ha confirmado la reserva, en breves le llegará el correo.'});
+                          this.botones=true;
+                          this.dia=false;
+                          this.noche=false;
+                          this.personas= 1;
+                          var fec = new Date();
+                          var mes = fec.getMonth()+1;
+                          if((fec.getMonth()<10) || (fec.getDate()<10)){
+                              if(fec.getDate()<10){
+                                this.fecha = fec.getFullYear()+"-0"+mes+"-0"+fec.getDate();
+                              }else{
+                                this.fecha = fec.getFullYear()+"-0"+mes+"-"+fec.getDate();
+                              }
+                          }else{
+                              this.fecha = fec.getFullYear()+"-"+mes+"-"+fec.getDate();
+                          }
                     } else{
                       this.$notify({type:'error', title:'Error', text: 'Escoge dia-noche para la reserva.'})
                     }
@@ -289,3 +304,4 @@ export default {
 @import "../scss/components/_reserva.scss";
 
 </style>
+
